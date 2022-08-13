@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+      <meta name="description" content="description site here for seo" />
+      <meta name="keywords" content="keywords for seo,65key max" />
+      <meta name="author" content="AHMED MENISY" />
+      <title>Crud</title>
+      <!-- google fonts Nunito -->
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+         href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900&display=swap"
+         rel="stylesheet"
+      />
+      <!-- Font Awesome6.1 Css File -->
+      <link rel="stylesheet" href="./css/all.min.css" />
+      <!-- BootStrap5.2 Css File -->
+      <link rel="stylesheet" href="./css/bootstrap.min.css" />
+      <!-- Custome File Css -->
+      <link rel="stylesheet" href="./css/style.css" />
+   </head>
+   <body>
+      <main class="py-4">
+         <!-- --------------- Start Product Info ----------------->
+         <section
+            class="product-info container bg-light py-4 rounded shadow-sm"
+         >
+           <form class=" w-75 mx-auto">
+            <div class="main-title text-center mb-4">
+               <h1 class="h2 fw-bold text-dark">product managment system</h1>
+            </div>
+            <div class="product-content" id="formProduct">
+               <div class="form-floating mb-3">
+                  <input
+                     type="text"
+                     class="form-control"
+                     name="productName"
+                     id="productName"
+                     placeholder=" "
+                     title="Enter Your Product Name"
+                     aria-label="input text data product name"
+                  />
+                  <p class="alert alert-danger alert-msg d-none">Name Required</p>
+                  <label for="productName">product name</label>
+               </div>
+               <div class="form-floating mb-3">
+                  <input
+                     min="0"
+                     max="900000"
+                     type="number"
+                     class="form-control"
+                     name="productPrice"
+                     id="productPrice"
+                     placeholder=" "
+                     title="Enter Your Product Price"
+                     aria-label="input text data product price"
+                  />
+                  <p class="alert alert-danger alert-msg d-none">price Required</p>
+                  <label for="productPrice">product price</label>
+               </div>
+               <div class="form-floating mb-3">
+                  <input
+                     type="text"
+                     class="form-control"
+                     name="productCategory"
+                     id="productCategory"
+                     placeholder=" "
+                     title="Enter Your product Category"
+                     aria-label="input text data product Category"
+                  />
+                  <p class="alert alert-danger alert-msg d-none">Category Required</p>
+                  <label for="productCategory">product category</label>
+               </div>
+               <div class="form-floating mb-3">
+                  <textarea
+                     class="form-control"
+                     name="productDescription"
+                     id="productDescription"
+                     placeholder=" "
+                     title="Enter Your Product Description"
+                     aria-label="input text data product Description"
+                     style="min-height: 100px; max-height: 250px"
+                  ></textarea>
+                  <p class="alert alert-danger alert-msg d-none">Description Required</p>
+                  <label for="productDescription">product Description</label>
+               </div>
+            </div>
+         </form>
+         <div class="w-75 mx-auto">
+            <button
+            type="button"
+            class="btn btn-primary btn-sm text-capitalize"
+            id="addProduct"
+            title="Add Product"
+            aria-label="button to add data"
+            disabled
+         >
+            add product
+         </button>
+         <button
+            type="button"
+            class="btn btn-warning btn-sm text-capitalize d-none"
+            id="updateProduct"
+            title="update product"
+            aria-label="button to update data"
+           
+         >
+            update product
+         </button>
+         <div class="form-floating mt-4 mb-2">
+            <input
+               type="search"
+               class="form-control"
+               name="search"
+               id="search"
+               placeholder=" "
+            />
+            <label for="search">Search By Name...</label>
+         </div>
+         </div>
+         </section>
+         <!-- --------------- End Product Info ----------------->
+         <!-- --------------- Start Table Data ----------------->
+         <section class="table-data pt-3  container-fluid">
+            <div class="table-responsive">
+               <table class="table table-striped">
+                  <thead>
+                     <tr class="sticky-top table-light text-nowrap">
+                        <th>index</th>
+                        <th>product name</th>
+                        <th>product price</th>
+                        <th>product category</th>
+                        <th>product description</th>
+                        <th>action</th>
+                     </tr>
+                  </thead>
+                  <tbody id="row" class="align-middle"></tbody>
+               </table>
+            </div>
+         </section>
+
+         <!-- --------------- End Table Data ----------------->
+      </main>
+      <!-- BootStrap5.2 Js File -->
+      <script src="./js/bootstrap.bundle.min.js"></script>
+      <!-- Custome File Js -->
+      <script src="./js/main.js"></script>
+   </body>
+</html>
